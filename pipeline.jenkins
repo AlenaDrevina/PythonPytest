@@ -18,5 +18,10 @@ pipeline {
          sh 'git merge main'
         }
       }
+      stage('Print') {
+     steps {
+       echo 'Well done!'
+     }
+   }
     }    
   }

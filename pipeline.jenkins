@@ -5,14 +5,10 @@ pipeline {
      
       stage('Build') {
         steps {
-          git branch: 'main', url: 'https://github.com/AlenaDrevina/PythonPytest.git'
+          git branch: 'Module5', url: 'https://github.com/AlenaDrevina/PythonPytest.git'
           sh 'python3 t1.py'
         }
       }
-      stage('Test') {
-        steps {
-          sh 'python3 -m pytest -v -s t1.py --html=report.html'
-        }
-      }
+      
     }    
   }

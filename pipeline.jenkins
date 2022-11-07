@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage('Build') {
         steps {
-          git branch: "${params.BRANCH}", url: 'https://github.com/AlenaDrevina/PythonPytest.git'
+          git branch: "${params.BRANCH}", url: 'https://github.com/AlenaDrevina/PythonPytest'
           sh 'python3 t1.py'
         }
       }

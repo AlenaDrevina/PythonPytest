@@ -5,7 +5,7 @@ pipeline {
 
       stage('run tests') {
         steps{      
-          bat 'python Tests/test.py'
+          sh 'python3 t3.py'
         }
         }
 

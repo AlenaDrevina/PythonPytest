@@ -15,7 +15,7 @@ pipeline {
       stage('Deploy') {
         steps {
          sh 'git checkout pre-prod'
-         def now = new Date(
+         def now = new Date()
          sh 'git commit -m now.format("yyMMdd.HHmm")'
          sh 'git merge main'
         }

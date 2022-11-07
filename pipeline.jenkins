@@ -16,7 +16,8 @@ pipeline {
         steps {
          sh 'git checkout pre-prod'
          sh 'git merge main'
-         sh 'git commit'
+         sh 'git add .'
+         sh 'git commit -m 'OK''
         }
       }
       stage('Print') {

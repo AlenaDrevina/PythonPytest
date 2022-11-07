@@ -5,7 +5,7 @@ pipeline {
      
       stage('Build') {
         steps {
-          git url:'https://github.com/AlenaDrevina/PythonPytest'
+          git url:'https://github.com/AlenaDrevina/PythonPytest',git branch: 'main'
           sh 'python3 t1.py'
         }
       }

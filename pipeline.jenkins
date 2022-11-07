@@ -9,9 +9,11 @@ pipeline {
 		  sh 'python3 t1.py'
         }
       }
-	  stage('Test')  {
-	  steps {
+       stage('Test')  {
+	 steps {
 	    sh 'python3 -m pytest -v -s t1.py'
+	    }
+	  }
 
   }
 }

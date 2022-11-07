@@ -1,11 +1,14 @@
 pipeline {
     agent any
     stages {
-    
-     
+   
       stage('Build') {
         steps {
-          git branch: 'Module5', url: 'https://github.com/AlenaDrevina/PythonPytest.git'
+          git branch: 'main', url: 'https://github.com/AlenaDrevina/PythonPytest.git
+        }
+      }
+      stage('Test') {
+        steps {
           sh 'python3 t1.py'
         }
       }

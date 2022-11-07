@@ -12,6 +12,11 @@ pipeline {
           sh 'python3 t1.py'
         }
       }
-      
+      stage('Deploy') {
+        steps {
+         sh 'git checkout -b pre-prod'
+         sh 'git merge main'
+        }
+      }
     }    
   }

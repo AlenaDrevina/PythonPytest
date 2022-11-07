@@ -1,0 +1,17 @@
+pipeline {
+   agent any
+
+   stages {
+
+      stage('Build') {
+        steps{      
+          git branch 'Module5CI_CD', url: 'https://github.com/AlenaDrevina/PythonPytest.git'
+		  sh 'python3 t1.py'
+        }
+      }
+	  stage('Test')  {
+	  steps {
+	    sh 'python3 -m pytest -v -s t1.py'
+
+  }
+}

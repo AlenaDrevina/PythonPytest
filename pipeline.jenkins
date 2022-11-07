@@ -15,7 +15,7 @@ pipeline {
       stage('Deploy') {
         steps {
          sh 'git checkout pre-prod'
-         sh 'git commit -m 'Updated''
+         sh 'git commit -m "Updated"'
          sh 'git merge main'
         }
       }

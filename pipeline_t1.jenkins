@@ -1,13 +1,12 @@
 pipeline {
-   agent any
-
-   stages {
-
-      stage('run tests') {
-        steps{      
-          bat 'python t1.py'
-        }
-        }
-
-  }
+  agent any 
+  stages { 
+    stage('Tests') {
+      when {
+        branch 'main'
+      }
+      steps {
+        echo 'foo'
+      } 
+   }
 }

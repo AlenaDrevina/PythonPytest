@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
+    
+    stage('SCM checkout'){
+    echo"pulling changes from the branch ${params.branch}"
+    git url:'https://github.com/AlenaDrevina/PythonPytest', branch: 'Module5'
+     }
+     
       stage('Build') {
         steps {
-          git branch: 'Module5', url: 'https://github.com/AlenaDrevina/PythonPytest.git'
           sh 'python3 t1.py'
         }
       }

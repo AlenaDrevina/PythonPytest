@@ -14,7 +14,7 @@ pipeline {
       }
       stage('Deploy') {
         steps {
-         sh 'git checkout -b pre-prod'
+         sh 'git checkout -b dev-prod'
          sh 'git merge main'
         }
       }

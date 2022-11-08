@@ -2,19 +2,11 @@ import pyodbc
 import pytest
 import pymssql
 
-'''
 try:
     connection = pyodbc.connect('DRIVER={SQL Server};Server=EPBYMINW0EE0\\SQLEXPRESS03;Database=TRN;username= testuser;password=password12345')
     print("There is connection to DB")
 except Exception as ex:
-    print(ex)  '''
-
-connection = pymssql.connect(
-    host='172.22.144.1',
-    user='testuser',
-    password='password12345',
-    database='TRN'
-)
+    print(ex) 
 
 def test01():
     """

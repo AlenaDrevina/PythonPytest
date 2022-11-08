@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Test') {
         steps {
-          sh 'robot Tests/test.robot'
+          sh 'python3 -m robot Tests/test.robot'
         }
       }
       stage('Deploy') {

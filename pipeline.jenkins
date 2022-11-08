@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Test') {
         steps {
-          sh 'python3 t1.py'
+          sh 'robot Tests/test.robot'
         }
       }
       stage('Deploy') {

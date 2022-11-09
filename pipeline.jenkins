@@ -21,6 +21,8 @@ pipeline {
          sh 'git config --global user.name "admin"'
          sh 'git commit -m "comment"'
          sh 'git push'
+         sh 'git checkout pre-prod'
+         sh 'git merge main'         
         }
       }
       stage('Monitor') {

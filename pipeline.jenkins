@@ -14,6 +14,7 @@ pipeline {
       }
       stage('Deploy') {
         steps {
+         sh 'git stash'
          sh 'git checkout pre-prod'
          sh 'git merge main'
          sh 'git add .'

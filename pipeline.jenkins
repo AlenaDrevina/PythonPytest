@@ -19,7 +19,6 @@ pipeline {
          sh 'git merge main'
          sh 'git add .'
          sh 'git commit'
-         sh 'git push'
         }
       }
       stage('Monitor') {

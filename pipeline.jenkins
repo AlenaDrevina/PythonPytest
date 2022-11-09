@@ -20,7 +20,8 @@ pipeline {
          sh 'git config --global user.email "alena_drevina@epam.com"'
          sh 'git config --global user.name "Admin"'
          sh 'git commit -a'
-      }
+         sh 'git push origin'
+        }
       }
       stage('Monitor') {
      steps {

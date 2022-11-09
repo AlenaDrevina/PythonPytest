@@ -14,11 +14,12 @@ pipeline {
       }
       stage('Deploy') {
         steps {
-         sh 'git stash'
          sh 'git checkout pre-prod'
          sh 'git merge main'
          sh 'git add .'
-         sh 'git push pre-prod'
+         sh 'git config --global user.email "alena_drevina@epam.com"'
+         sh 'git config --global user.name "admin"'
+         sh 'git commit -m "comment"'
         }
       }
       stage('Monitor') {

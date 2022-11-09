@@ -15,7 +15,7 @@ import pymssql
 def connect_db():
     conn_db = pymssql.connect(
         host='127.0.0.1',
-        port='59325',
+     #   port='59325',
         user='testuser',
         password='password12345',
         database='TRN',

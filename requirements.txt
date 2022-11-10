@@ -1,5 +1,7 @@
 pyodbc==4.0.34
 pytest==7.2.0
 pytest-html-reporter==0.2.9
-
-
+pymssql==2.2.5
+robotframework==4.0.3
+robotframework-reportportal==5.2.0
+robotframework-databaselibrary==1.2.4
